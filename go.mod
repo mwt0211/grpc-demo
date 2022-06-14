@@ -1,4 +1,4 @@
-module grpc/demo
+module mwt.com/grpc/demo
 
 go 1.16
 

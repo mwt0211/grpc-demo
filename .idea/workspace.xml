@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/Client/service/product_grpc.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/product_grpc.pb.go" afterDir="false" />
+    <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="更换protoc-gen-go生成器">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/service/product.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/Client/service/product.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/product.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/product.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/product_grpcClient.go" beforeDir="false" afterPath="$PROJECT_DIR$/Client/product_grpcClient.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/product_grpcServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/product_grpcServer.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,8 +70,18 @@
     <configuration name="go build grpc/demo/Client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpc-demo" />
       <working_directory value="$PROJECT_DIR$" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
       <kind value="PACKAGE" />
-      <package value="grpc/demo/Client" />
+      <package value="mwt.com/grpc/demo/Client" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/Client/product_grpcClient.go" />
       <method v="2" />
@@ -81,8 +89,18 @@
     <configuration name="go build grpc/demo/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpc-demo" />
       <working_directory value="$PROJECT_DIR$" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
       <kind value="PACKAGE" />
-      <package value="grpc/demo/server" />
+      <package value="mwt.com/grpc/demo/server" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/server/product_grpcServer.go" />
       <method v="2" />
@@ -112,7 +130,8 @@
     <MESSAGE value="grpc的初始化,并完成单向与双向的认证" />
     <MESSAGE value="完成Token的添加" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="更换protoc-gen-go生成器" />
+    <option name="LAST_COMMIT_MESSAGE" value="更换protoc-gen-go生成器" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
