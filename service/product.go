@@ -17,3 +17,4 @@ func (p *productService) GetProductStock(c context.Context, request *ProductRequ
 func (p *productService) GetStockById(id int32) int32 {
 	return id
 }
+func (p *productService) mustEmbedUnimplementedProdServiceServer() {}

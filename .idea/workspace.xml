@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="完成Token的添加">
-      <change beforePath="$PROJECT_DIR$/server/product_grpcServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/product_grpcServer.go" afterDir="false" />
+    <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/Client/service/product_grpc.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/product_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/service/product.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/Client/service/product.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product.pb.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,17 +49,17 @@
     <property name="configurable..is.expanded" value="true" />
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cert" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Client/service" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="go.autoimport" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ada\Desktop\exer_about_Go\grpc-demo\cert" />
       <recent name="C:\Users\ada\Desktop\exer_about_Go\grpc-demo\Client\service" />
+      <recent name="C:\Users\ada\Desktop\exer_about_Go\grpc-demo\cert" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build grpc/demo/Client">
+  <component name="RunManager" selected="Go Build.go build grpc/demo/server">
     <configuration name="go build grpc/demo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpc-demo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -106,7 +111,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="grpc的初始化,并完成单向与双向的认证" />
     <MESSAGE value="完成Token的添加" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成Token的添加" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
