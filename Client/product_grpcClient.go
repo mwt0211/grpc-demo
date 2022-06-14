@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
+	"grpc/demo/Client/auth"
 	"grpc/demo/service"
 	"io/ioutil"
 	"log"
@@ -41,7 +42,12 @@ func main() {
 	//无认证状态的调用
 	//conn, err := grpc.Dial(":8099", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	//添加证书之后的调用
-	conn, err := grpc.Dial(":8099", grpc.WithTransportCredentials(creds))
+	//grpc.WithPerRPCCredentials()完成token的认证
+	Token := &auth.Authentication{
+		Password: "admin",
+		User:     "admin",
+	}
+	conn, err := grpc.Dial(":8099", grpc.WithTransportCredentials(creds), grpc.WithPerRPCCredentials(Token))
 	if err != nil {
 		log.Fatal(err)
 	}

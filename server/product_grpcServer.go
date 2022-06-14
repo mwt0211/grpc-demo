@@ -1,11 +1,15 @@
 package main
 
 import (
+	"context"
 	"crypto/tls"
 	"crypto/x509"
 	"fmt"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/credentials"
+	"google.golang.org/grpc/metadata"
+	"google.golang.org/grpc/status"
 	"grpc/demo/service"
 	"io/ioutil"
 	"log"
@@ -46,7 +50,25 @@ func main() {
 		// 设置根证书的集合，校验方式使用 ClientAuth 中设定的模式
 		ClientCAs: certPool,
 	})
-	server := grpc.NewServer(grpc.Creds(creds))
+	//实现token认证,需要合法的用户名和密码
+	//需要拦截器
+	var authInterceptor grpc.UnaryServerInterceptor
+	//type UnaryServerInterceptor func(ctx context.Context, req interface{}, info *UnaryServerInfo, handler UnaryHandler) (resp interface{}, err error)
+	authInterceptor = func(
+		ctx context.Context,
+		req interface{},
+		info *grpc.UnaryServerInfo,
+		handler grpc.UnaryHandler) (resp interface{}, err error) {
+		//实现拦截普通方法请求,验证Token
+		err = Auth(ctx)
+		if err != nil {
+			return
+		}
+		//无err处理请求
+		return handler(ctx, req)
+
+	}
+	server := grpc.NewServer(grpc.Creds(creds), grpc.UnaryInterceptor(authInterceptor))
 	//注册
 	service.RegisterProdServiceServer(server, service.ProductService)
 	listen, err := net.Listen("tcp", ":8099")
@@ -62,4 +84,27 @@ func main() {
 
 	}
 	fmt.Println("启动product_grpcServer端成功")
+}
+
+func Auth(ctx context.Context) error {
+	//拿到传输的用户名和密码
+	md, ok := metadata.FromIncomingContext(ctx)
+
+	if !ok {
+		return fmt.Errorf("missing credentials")
+	}
+	var user string
+	var password string
+
+	if val, ok := md["user"]; ok {
+		user = val[0]
+	}
+	if val, ok := md["password"]; ok {
+		password = val[0]
+	}
+
+	if !(user == "admin" && password == "admin") {
+		return status.Errorf(codes.Unauthenticated, "token不合法")
+	}
+	return nil
 }

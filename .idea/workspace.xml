@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/grpc-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/product_grpcClient.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/service/product.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pbfile/product.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pbfile/user.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cert/ca.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cert/ca.csr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cert/ca.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cert/client.csr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cert/client.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cert/client.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cert/openssl.cnf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cert/server.csr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cert/server.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cert/server.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/product_grpcServer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/product.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/product.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/user.pb.go" afterDir="false" />
+    <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="grpc的初始化,并完成单向与双向的认证">
+      <change afterPath="$PROJECT_DIR$/Client/auth/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/product_grpcClient.go" beforeDir="false" afterPath="$PROJECT_DIR$/Client/product_grpcClient.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/product_grpcServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/product_grpcServer.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,14 +15,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="Go Application" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
   <component name="GOROOT" url="file://D:/goLang_SDk/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/go.mod" root0="FORCE_HIGHLIGHTING" />
@@ -56,7 +43,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="configurable..is.expanded" value="true" />
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
@@ -107,10 +94,21 @@
     </recent_temporary>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="grpc的初始化,并完成单向与双向的认证" />
+    <option name="LAST_COMMIT_MESSAGE" value="grpc的初始化,并完成单向与双向的认证" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
