@@ -88,6 +88,9 @@ func main() {
 
 func Auth(ctx context.Context) error {
 	//拿到传输的用户名和密码
+
+	//func FromIncomingContext(ctx context.Context) (MD, bool)
+	//type MD map[string][]string
 	md, ok := metadata.FromIncomingContext(ctx)
 
 	if !ok {

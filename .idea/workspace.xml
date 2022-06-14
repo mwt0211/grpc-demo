@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="grpc的初始化,并完成单向与双向的认证">
-      <change afterPath="$PROJECT_DIR$/Client/auth/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/product_grpcClient.go" beforeDir="false" afterPath="$PROJECT_DIR$/Client/product_grpcClient.go" afterDir="false" />
+    <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="完成Token的添加">
       <change beforePath="$PROJECT_DIR$/server/product_grpcServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/product_grpcServer.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +105,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="grpc的初始化,并完成单向与双向的认证" />
-    <option name="LAST_COMMIT_MESSAGE" value="grpc的初始化,并完成单向与双向的认证" />
+    <MESSAGE value="完成Token的添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成Token的添加" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
