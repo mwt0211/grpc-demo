@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"google.golang.org/protobuf/proto"
-	"grpc/demo/service"
+	"mwt.com/grpc/demo/service"
 )
 
 func main() {
