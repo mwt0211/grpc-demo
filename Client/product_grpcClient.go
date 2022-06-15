@@ -59,7 +59,7 @@ func main() {
 	//productServiceClient := service.NewProdServiceClient(conn)
 	productServiceClient := service.NewProdServiceClient(conn)
 	// 3. 直接像调用本地方法一样调用GetProductStock方法
-	req := &service.ProductRequest{ProdId: 488}
+	req := &service.ProductRequest{ProdId: 511}
 	resp, err := productServiceClient.GetProductStock(context.Background(), req)
 	if err != nil {
 		log.Fatal("调用gRPC方法错误: ", err)
