@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="update README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/product_grpcClient.go" beforeDir="false" afterPath="$PROJECT_DIR$/Client/product_grpcClient.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/service/product.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/Client/service/product.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pbfile/product.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Pbfile/product.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pbfile/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Pbfile/user.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user.pb.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +73,7 @@
       <recent name="C:\Users\ada\Desktop\exer_about_Go\grpc-demo\cert" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build grpc/demo/server">
+  <component name="RunManager" selected="Go Build.go build grpc/demo/Client">
     <configuration name="go build grpc/demo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpc-demo" />
       <working_directory value="$PROJECT_DIR$" />

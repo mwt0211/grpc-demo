@@ -48,6 +48,14 @@
    
     -- key：** 服务器上的私钥文件，用于对发送给客户端数据的加密，以及对从客户端接收到数据的解密。
    ```
+   
+   
+   
+8. 生成proto.pb文件:
+
+   ```go
+   protoc --go_out=./service --go-grpc_out=./service Pbfile\***.proto
+   ```
 
 
 
