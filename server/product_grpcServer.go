@@ -71,7 +71,7 @@ func main() {
 	server := grpc.NewServer(grpc.Creds(creds), grpc.UnaryInterceptor(authInterceptor))
 	//注册
 	service.RegisterProdServiceServer(server, service.ProductService)
-	listen, err := net.Listen("tcp", ":8099")
+	listen, err := net.Listen("tcp", ":8098")
 	if err != nil {
 		log.Fatal("启动监听失败", err)
 		fmt.Printf("err:%s", err)

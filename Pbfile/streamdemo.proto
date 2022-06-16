@@ -1,0 +1,24 @@
+// 指定的当前proto语法的版本，有2和3
+syntax = "proto3";
+//option go_package = "path;name"; ath 表示生成的go文件的存放地址，会自动生成目录的
+// name 表示生成的go文件所属的包名
+option go_package="../service";
+// 指定等会文件生成出来的package
+package service;
+message pingRequest{
+
+}
+message pingResponse{
+
+}
+// 定义服务主体
+service streamService{
+  // 普通RPC
+  rpc SimplePing(pingRequest) returns(pingResponse);
+  //客户端流式 RPC
+  rpc ClientStreamPing(stream pingRequest) returns(pingResponse);
+  //服务端流式 RPC
+  rpc ServerStreamPing( pingRequest) returns(stream pingResponse);
+  //客户端,服务端双向流式R PC
+  rpc BothStreamPing(stream pingRequest) returns(stream pingResponse);
+}

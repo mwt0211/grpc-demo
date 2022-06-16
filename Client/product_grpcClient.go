@@ -47,7 +47,7 @@ func main() {
 		Password: "admin",
 		User:     "admin",
 	}
-	conn, err := grpc.Dial(":8099", grpc.WithTransportCredentials(creds), grpc.WithPerRPCCredentials(Token))
+	conn, err := grpc.Dial(":8098", grpc.WithTransportCredentials(creds), grpc.WithPerRPCCredentials(Token))
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -59,11 +59,47 @@ func main() {
 	//productServiceClient := service.NewProdServiceClient(conn)
 	productServiceClient := service.NewProdServiceClient(conn)
 	// 3. 直接像调用本地方法一样调用GetProductStock方法
-	req := &service.ProductRequest{ProdId: 511}
-	resp, err := productServiceClient.GetProductStock(context.Background(), req)
-	if err != nil {
-		log.Fatal("调用gRPC方法错误: ", err)
-	}
+	//req := &service.ProductRequest{ProdId: 511}
+	/*	resp, err := productServiceClient.GetProductStock(context.Background(), req)
+		if err != nil {
+			log.Fatal("调用gRPC方法错误: ", err)
+		}
 
-	fmt.Println("调用gRPC方法成功，库存ProdStock为 :", resp.ProdStock, resp.User)
+		fmt.Println("调用gRPC方法成功，库存ProdStock为 :", resp.ProdStock, resp.User)*/
+	stream, err := productServiceClient.UpdateProductStockClientStream(context.Background())
+	if err != nil {
+		log.Fatal("获取流失败: ", err)
+	}
+	//源源不断的发送数据
+	resp := make(chan struct{}, 1)
+	go ProdRequest(stream, resp)
+	select {
+	case <-resp:
+		recv, err := stream.CloseAndRecv()
+		if err != nil {
+			log.Fatal("接收并关闭流失败", err)
+		}
+		stock := recv.ProdStock
+		fmt.Println("客户端收到响应", stock, recv.User)
+	}
+}
+
+func ProdRequest(stream service.ProdService_UpdateProductStockClientStreamClient, resp chan struct{}) {
+	//源源不断的发送数据
+	count := 0
+	for {
+
+		req := &service.ProductRequest{ProdId: 155}
+		err := stream.Send(req)
+		if err != nil {
+			log.Fatal("发送流数据失败", err)
+		}
+		count++
+		fmt.Printf("第%d次发送\n", count)
+		if count > 10 {
+			//数据发送完成
+			resp <- struct{}{}
+			break
+		}
+	}
 }

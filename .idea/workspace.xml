@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="更改注释">
+      <change afterPath="$PROJECT_DIR$/Pbfile/streamdemo.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/service/product.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/Client/service/product.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/product_grpcClient.go" beforeDir="false" afterPath="$PROJECT_DIR$/Client/product_grpcClient.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pbfile/product.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Pbfile/product.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pbfile/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Pbfile/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/product_grpcServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/product_grpcServer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/product.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/product_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user.pb.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +65,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.autoimport" />
+    <property name="settings.editor.selected.configurable" value="google.protobuf.language" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -68,6 +74,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build grpc/demo/Client">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="grpc-demo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build grpc/demo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpc-demo" />
       <working_directory value="$PROJECT_DIR$" />
@@ -124,11 +139,21 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="grpc-demo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build grpc/demo/Client" />
-        <item itemvalue="Go Build.go build mwt.com/grpc/demo" />
         <item itemvalue="Go Build.go build grpc/demo/server" />
+        <item itemvalue="Go Build.go build mwt.com/grpc/demo" />
         <item itemvalue="Go Build.go build grpc/demo" />
       </list>
     </recent_temporary>
