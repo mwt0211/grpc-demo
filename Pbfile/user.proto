@@ -56,3 +56,6 @@ message Grandpa { // Level 0
     }
   }
 }
+service UserService{
+  rpc getUserById(UserRequest) returns(UserResponse);
+}

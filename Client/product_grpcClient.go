@@ -7,10 +7,12 @@ import (
 	"fmt"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
+	"io"
 	"io/ioutil"
 	"log"
 	"mwt.com/grpc/demo/Client/auth"
 	"mwt.com/grpc/demo/service"
+	"time"
 )
 
 func main() {
@@ -66,11 +68,11 @@ func main() {
 		}
 
 		fmt.Println("调用gRPC方法成功，库存ProdStock为 :", resp.ProdStock, resp.User)*/
-	stream, err := productServiceClient.UpdateProductStockClientStream(context.Background())
+	/*stream, err := productServiceClient.UpdateProductStockClientStream(context.Background())
 	if err != nil {
 		log.Fatal("获取流失败: ", err)
 	}
-	//源源不断的发送数据
+	//客户端源源不断的发送数据
 	resp := make(chan struct{}, 1)
 	go ProdRequest(stream, resp)
 	select {
@@ -81,7 +83,27 @@ func main() {
 		}
 		stock := recv.ProdStock
 		fmt.Println("客户端收到响应", stock, recv.User)
+	}*/
+	//客户端发送一次请求,服务端不断发送请求
+	req := &service.ProductRequest{ProdId: 166}
+	stream, err := productServiceClient.GetProductStockServerStream(context.Background(), req)
+	if err != nil {
+		log.Fatal("客户端发送一次请求,服务端不断接收请求失败", err)
 	}
+	//
+	for {
+		recv, err := stream.Recv()
+		if err != nil {
+			if err == io.EOF {
+				fmt.Println("客户端接收服务端的请求完毕")
+				stream.CloseSend()
+				break
+			}
+			log.Fatal("客户端接受请求失败", err)
+		}
+		fmt.Println("客户端接收服务端发送的流", recv.ProdStock)
+	}
+
 }
 
 func ProdRequest(stream service.ProdService_UpdateProductStockClientStreamClient, resp chan struct{}) {
@@ -89,11 +111,13 @@ func ProdRequest(stream service.ProdService_UpdateProductStockClientStreamClient
 	count := 0
 	for {
 
-		req := &service.ProductRequest{ProdId: 155}
+		req := &service.ProductRequest{ProdId: 166}
 		err := stream.Send(req)
 		if err != nil {
 			log.Fatal("发送流数据失败", err)
 		}
+		//隔五秒发送一次
+		time.Sleep(time.Second * 2)
 		count++
 		fmt.Printf("第%d次发送\n", count)
 		if count > 10 {
