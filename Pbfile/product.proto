@@ -24,4 +24,6 @@ service ProdService{
   rpc GetProductStock(ProductRequest) returns(ProductResponse);
   //客户端流式 RPC
   rpc UpdateProductStockClientStream( stream ProductRequest) returns(ProductResponse);
+  //服务端流式 RPC
+  rpc GetProductStockServerStream(  ProductRequest) returns(stream ProductResponse);
 }

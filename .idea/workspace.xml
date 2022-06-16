@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="更改注释">
-      <change afterPath="$PROJECT_DIR$/Pbfile/streamdemo.proto" afterDir="false" />
+    <list default="true" id="15bff58a-4fd5-4dc0-95f1-b9785f3fec5d" name="Default Changelist" comment="加入客户端stream在product.proto">
+      <change afterPath="$PROJECT_DIR$/service/user_grpc.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/product_grpcClient.go" beforeDir="false" afterPath="$PROJECT_DIR$/Client/product_grpcClient.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pbfile/product.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Pbfile/product.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pbfile/streamdemo.proto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Pbfile/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Pbfile/user.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/product_grpcServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/product_grpcServer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/product.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/product.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/product_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/product_grpc.pb.go" afterDir="false" />
@@ -71,6 +71,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ada\Desktop\exer_about_Go\grpc-demo\Client\service" />
       <recent name="C:\Users\ada\Desktop\exer_about_Go\grpc-demo\cert" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ada\Desktop\exer_about_Go\grpc-demo\service" />
+      <recent name="C:\Users\ada\Desktop\exer_about_Go\grpc-demo\Model" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build grpc/demo/Client">
@@ -183,7 +187,8 @@
     <MESSAGE value="规范mod文件的命名" />
     <MESSAGE value="update README.md" />
     <MESSAGE value="在一个proto文件中导入另一个proto" />
-    <option name="LAST_COMMIT_MESSAGE" value="在一个proto文件中导入另一个proto" />
+    <MESSAGE value="加入客户端stream在product.proto" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入客户端stream在product.proto" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
