@@ -24,7 +24,7 @@ func (h *helloService) SayHello(ctx context.Context, req *service.Req) (res *ser
 func main() {
 
 	//3.注册服务
-	listen, err := net.Listen("tcp", ":8088")
+	listen, err := net.Listen("tcp", ":8089")
 	if err != nil {
 		log.Fatal("注册监听失败", err)
 	}

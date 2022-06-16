@@ -10,7 +10,7 @@ import (
 
 func main() {
 	//1.创建连接
-	conn, err := grpc.Dial(":8088", grpc.WithInsecure())
+	conn, err := grpc.Dial(":8089", grpc.WithInsecure())
 	if err != nil {
 		log.Fatal("客户端链接失败")
 	}
